@@ -53,19 +53,20 @@ namespace Veran_Final_Summative
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mAINMENUToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(853, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(853, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // mAINMENUToolStripMenuItem
             // 
             this.mAINMENUToolStripMenuItem.Name = "mAINMENUToolStripMenuItem";
-            this.mAINMENUToolStripMenuItem.Size = new System.Drawing.Size(87, 19);
+            this.mAINMENUToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
             this.mAINMENUToolStripMenuItem.Text = "MAIN MENU";
             this.mAINMENUToolStripMenuItem.Click += new System.EventHandler(this.mAINMENUToolStripMenuItem_Click);
             // 
@@ -78,6 +79,7 @@ namespace Veran_Final_Summative
             this.movieDgrid.Location = new System.Drawing.Point(12, 28);
             this.movieDgrid.Name = "movieDgrid";
             this.movieDgrid.ReadOnly = true;
+            this.movieDgrid.RowHeadersWidth = 51;
             this.movieDgrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.movieDgrid.Size = new System.Drawing.Size(605, 414);
             this.movieDgrid.TabIndex = 1;
@@ -145,7 +147,7 @@ namespace Veran_Final_Summative
             this.groupBox2.Controls.Add(this.txtSearch);
             this.groupBox2.Location = new System.Drawing.Point(624, 28);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(225, 159);
+            this.groupBox2.Size = new System.Drawing.Size(225, 196);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Search";
@@ -153,9 +155,9 @@ namespace Veran_Final_Summative
             // byRentalFee
             // 
             this.byRentalFee.AutoSize = true;
-            this.byRentalFee.Location = new System.Drawing.Point(103, 59);
+            this.byRentalFee.Location = new System.Drawing.Point(7, 120);
             this.byRentalFee.Name = "byRentalFee";
-            this.byRentalFee.Size = new System.Drawing.Size(119, 22);
+            this.byRentalFee.Size = new System.Drawing.Size(146, 26);
             this.byRentalFee.TabIndex = 4;
             this.byRentalFee.TabStop = true;
             this.byRentalFee.Text = "By Rental Fee";
@@ -166,7 +168,7 @@ namespace Veran_Final_Summative
             this.byGenre.AutoSize = true;
             this.byGenre.Location = new System.Drawing.Point(7, 88);
             this.byGenre.Name = "byGenre";
-            this.byGenre.Size = new System.Drawing.Size(87, 22);
+            this.byGenre.Size = new System.Drawing.Size(107, 26);
             this.byGenre.TabIndex = 3;
             this.byGenre.TabStop = true;
             this.byGenre.Text = "By Genre";
@@ -177,7 +179,7 @@ namespace Veran_Final_Summative
             this.byName.AutoSize = true;
             this.byName.Location = new System.Drawing.Point(7, 59);
             this.byName.Name = "byName";
-            this.byName.Size = new System.Drawing.Size(85, 22);
+            this.byName.Size = new System.Drawing.Size(105, 26);
             this.byName.TabIndex = 2;
             this.byName.TabStop = true;
             this.byName.Text = "By Name";
@@ -185,7 +187,7 @@ namespace Veran_Final_Summative
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(64, 123);
+            this.btnSearch.Location = new System.Drawing.Point(64, 160);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(100, 30);
             this.btnSearch.TabIndex = 1;
@@ -198,12 +200,12 @@ namespace Veran_Final_Summative
             this.txtSearch.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(6, 24);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(210, 28);
+            this.txtSearch.Size = new System.Drawing.Size(210, 33);
             this.txtSearch.TabIndex = 0;
             // 
             // movieMod
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 454);
             this.Controls.Add(this.groupBox2);

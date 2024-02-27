@@ -209,8 +209,7 @@ namespace DataHelper
             return getTotFee - enteredPrice;
 
         }
-        
-        //Add saving to database function
+
         #endregion
     }
 }

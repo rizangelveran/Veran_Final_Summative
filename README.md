@@ -1,4 +1,5 @@
-This CoolFLIX, Ticketing app wherein the potential uses are for computerizing ticket selling and buying Administrators can create, update and/or delete new Movie list and available tickets. Users can view Movie List and buy tickets
+[PORTFOLIO]
+This is CoolFLIX, Ticketing app wherein the potential uses are for computerizing ticket selling and buying Administrators can create, update and/or delete new Movie list and available tickets. Users can view Movie List and buy tickets
 
 Local theaters, previously relying on traditional ticketing methods, are now seamlessly computerizing their operations through this user-friendly platform. 
 Administrators are empowered to effortlessly create, update, and delete movie listings as well as manage titles streamlining the process and ensuring accurate inventory management. 

@@ -212,6 +212,21 @@ namespace DataHelper
 
         //Add saving to database function
 
+        public void SaveMovieSale(string getMovieName, string getGenre, decimal getRecFee, decimal getDuration, string getUsername)
+        {
+            myConn.Open();
+            SqlCommand saveCmd = new SqlCommand("SaveMovie", myConn);
+            saveCmd.CommandType = CommandType.StoredProcedure;
+            saveCmd.Parameters.Add("@movName", SqlDbType.NVarChar).Value = getMovieName;
+            saveCmd.Parameters.Add("@movGenre", SqlDbType.NVarChar).Value = getGenre;
+            saveCmd.Parameters.Add("@totalPrice", SqlDbType.Decimal).Value = getRecFee;//push to totalprice value/columns
+            saveCmd.Parameters.Add("@userPurchaser", SqlDbType.NVarChar).Value = getUsername;
+            saveCmd.Parameters.Add("@duration", SqlDbType.Int).Value = getDuration;
+
+            saveCmd.ExecuteNonQuery();
+            myConn.Close();
+        }
+
         #endregion
     }
 }

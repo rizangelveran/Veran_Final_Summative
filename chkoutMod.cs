@@ -58,6 +58,9 @@ namespace Veran_Final_Summative
                         txtReciept.AppendText("\n========================");
                         txtReciept.AppendText("\n Payment Successfull");
                         txtReciept.AppendText("\n Change: " +tobePaid);
+
+                    dt.SaveMovieSale(movName, movGenre, renFee, RentDuration, myUser);
+                    MessageBox.Show("Thank You very much!", "Info");
                     }
                     else
                     {

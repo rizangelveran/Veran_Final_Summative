@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Data;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace DataHelper
 {
@@ -81,6 +82,17 @@ namespace DataHelper
         }
 
         //edit
+
+        public void ChangeNewPass(string getUserName, string getPassword)
+        {
+            myConn.Open();
+            SqlCommand saveCmd = new SqlCommand("ChangeUserPass", myConn);
+            saveCmd.CommandType = CommandType.StoredProcedure;
+            saveCmd.Parameters.Add("@userName", SqlDbType.NVarChar).Value = getUserName;
+            saveCmd.Parameters.Add("@newpassword", SqlDbType.NVarChar).Value = getPassword;
+            saveCmd.ExecuteNonQuery();
+            myConn.Close();
+        }
 
 
         //view all users

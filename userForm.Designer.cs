@@ -92,6 +92,7 @@ namespace Veran_Final_Summative
             this.editAccountToolStripMenuItem.Name = "editAccountToolStripMenuItem";
             this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(343, 32);
             this.editAccountToolStripMenuItem.Text = "Edit Account";
+            this.editAccountToolStripMenuItem.Click += new System.EventHandler(this.editAccountToolStripMenuItem_Click);
             // 
             // viewCurrentRentedMoviesToolStripMenuItem
             // 

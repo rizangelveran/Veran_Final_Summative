@@ -64,7 +64,7 @@ namespace Veran_Final_Summative
                         this.Visible = false;
                         showForms.ShowDialog();
 
-                        dt.SaveMovieSale(movName, movGenre, enteredPayment, RentDuration, myUser);
+                        dt.SaveMovieSale(movName, movGenre, enteredPayment,tobePaid, RentDuration, myUser);
                     
                     }
                     else

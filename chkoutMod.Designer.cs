@@ -103,7 +103,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "chkoutMod";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checkout ";
             this.ResumeLayout(false);

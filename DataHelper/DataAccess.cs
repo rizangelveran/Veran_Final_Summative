@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using System.Data;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace DataHelper
 {
@@ -82,6 +83,17 @@ namespace DataHelper
 
         //edit
 
+        public void ChangeNewPass(string getUserName, string getPassword)
+        {
+            myConn.Open();
+            SqlCommand saveCmd = new SqlCommand("ChangeUserPass", myConn);
+            saveCmd.CommandType = CommandType.StoredProcedure;
+            saveCmd.Parameters.Add("@userName", SqlDbType.NVarChar).Value = getUserName;
+            saveCmd.Parameters.Add("@newpassword", SqlDbType.NVarChar).Value = getPassword;
+            saveCmd.ExecuteNonQuery();
+            myConn.Close();
+        }
+
 
         //view all users
         public DataTable ViewAllUsers()
@@ -91,6 +103,20 @@ namespace DataHelper
             DataTable dt = new DataTable();
             viewAllMem.Fill(dt);
             return dt;
+        }
+
+        //view rented movie by user
+
+        public DataTable GetRentedMovie(string getLogUsers)
+        {
+            SqlCommand cmdRentedMovie = new SqlCommand("GetRentedMovieByUser", myConn);
+            cmdRentedMovie.CommandType = CommandType.StoredProcedure;
+            cmdRentedMovie.Parameters.Add("@getUserPurchaser", SqlDbType.NVarChar).Value = getLogUsers;
+            SqlDataAdapter viewUserMovie = new SqlDataAdapter(cmdRentedMovie);
+            DataTable dx = new DataTable();
+            viewUserMovie.Fill(dx);
+            return dx;
+
         }
 
         #endregion
@@ -211,6 +237,25 @@ namespace DataHelper
         }
 
         //Add saving to database function
+
+        public void SaveMovieSale(string getMovieName, string getGenre, decimal getRecFee, decimal getChange, decimal getDuration, string getUsername)
+        {
+            myConn.Open();
+            SqlCommand saveCmd = new SqlCommand("SaveMovie", myConn);
+            saveCmd.CommandType = CommandType.StoredProcedure;
+            saveCmd.Parameters.Add("@movName", SqlDbType.NVarChar).Value = getMovieName;
+            saveCmd.Parameters.Add("@movGenre", SqlDbType.NVarChar).Value = getGenre;
+            saveCmd.Parameters.Add("@totalPrice", SqlDbType.Decimal).Value = getRecFee;//totalprice of the transaction value/columns
+            saveCmd.Parameters.Add("@change", SqlDbType.Decimal).Value = getChange;
+            saveCmd.Parameters.Add("@userPurchaser", SqlDbType.NVarChar).Value = getUsername;
+            saveCmd.Parameters.Add("@duration", SqlDbType.Int).Value = getDuration;
+            int getCurrYear = DateTime.UtcNow.Year;
+            int getCurrDay = DateTime.UtcNow.Day;
+            saveCmd.Parameters.Add("@year", SqlDbType.Int).Value = getCurrYear;
+
+            saveCmd.ExecuteNonQuery();
+            myConn.Close();
+        }
 
         #endregion
     }

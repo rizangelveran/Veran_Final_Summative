@@ -87,6 +87,7 @@ namespace Veran_Final_Summative
         private void userForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+            
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -121,6 +122,18 @@ namespace Veran_Final_Summative
             logger.ShowDialog();
             logger.Visible = true;
             this.Close();
+        }
+
+        private void editAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userFormEdits editPass = new userFormEdits(myUser);
+            editPass.ShowDialog();
+        }
+
+        private void viewCurrentRentedMoviesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userFormRented rentedForm = new userFormRented(myUser);
+            rentedForm.ShowDialog();
         }
 
         private void txtsearchBox_TextChanged(object sender, EventArgs e)
@@ -184,5 +197,7 @@ namespace Veran_Final_Summative
                 showCheckOutMod.ShowDialog();
             }
         }
+
+        
     }
 }

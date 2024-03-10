@@ -90,26 +90,28 @@ namespace Veran_Final_Summative
             // editAccountToolStripMenuItem
             // 
             this.editAccountToolStripMenuItem.Name = "editAccountToolStripMenuItem";
-            this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(343, 32);
+            this.editAccountToolStripMenuItem.Size = new System.Drawing.Size(273, 32);
             this.editAccountToolStripMenuItem.Text = "Edit Account";
+            this.editAccountToolStripMenuItem.Click += new System.EventHandler(this.editAccountToolStripMenuItem_Click);
             // 
             // viewCurrentRentedMoviesToolStripMenuItem
             // 
             this.viewCurrentRentedMoviesToolStripMenuItem.Name = "viewCurrentRentedMoviesToolStripMenuItem";
-            this.viewCurrentRentedMoviesToolStripMenuItem.Size = new System.Drawing.Size(343, 32);
-            this.viewCurrentRentedMoviesToolStripMenuItem.Text = "View Current Rented Movies";
+            this.viewCurrentRentedMoviesToolStripMenuItem.Size = new System.Drawing.Size(273, 32);
+            this.viewCurrentRentedMoviesToolStripMenuItem.Text = "View Rented Movies";
+            this.viewCurrentRentedMoviesToolStripMenuItem.Click += new System.EventHandler(this.viewCurrentRentedMoviesToolStripMenuItem_Click);
             // 
             // lOGOUTToolStripMenuItem
             // 
             this.lOGOUTToolStripMenuItem.Name = "lOGOUTToolStripMenuItem";
-            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(343, 32);
+            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(273, 32);
             this.lOGOUTToolStripMenuItem.Text = "LOGOUT";
             this.lOGOUTToolStripMenuItem.Click += new System.EventHandler(this.lOGOUTToolStripMenuItem_Click);
             // 
             // eXITToolStripMenuItem
             // 
             this.eXITToolStripMenuItem.Name = "eXITToolStripMenuItem";
-            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(343, 32);
+            this.eXITToolStripMenuItem.Size = new System.Drawing.Size(273, 32);
             this.eXITToolStripMenuItem.Text = "EXIT";
             this.eXITToolStripMenuItem.Click += new System.EventHandler(this.eXITToolStripMenuItem_Click);
             // 

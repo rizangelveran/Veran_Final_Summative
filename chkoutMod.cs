@@ -54,10 +54,18 @@ namespace Veran_Final_Summative
                     tobePaid = enteredPayment - totPrice;
                     if(enteredPayment >= totPrice)
                     {
-                        MessageBox.Show("Payment Successfull", "Success");
+                        
                         txtReciept.AppendText("\n========================");
                         txtReciept.AppendText("\n Payment Successfull");
                         txtReciept.AppendText("\n Change: " +tobePaid);
+                        MessageBox.Show("Payment Successfull", "Success");
+                        this.Hide();
+                        userForm showForms = new userForm(myUser);
+                        this.Visible = false;
+                        showForms.ShowDialog();
+
+                        dt.SaveMovieSale(movName, movGenre, enteredPayment,tobePaid, RentDuration, myUser);
+                    
                     }
                     else
                     {

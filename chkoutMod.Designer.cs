@@ -54,6 +54,7 @@
             this.txtReciept.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtReciept.Location = new System.Drawing.Point(18, 43);
             this.txtReciept.Name = "txtReciept";
+            this.txtReciept.ShortcutsEnabled = false;
             this.txtReciept.Size = new System.Drawing.Size(322, 397);
             this.txtReciept.TabIndex = 1;
             this.txtReciept.Text = "";
@@ -102,7 +103,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "chkoutMod";
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Checkout ";
             this.ResumeLayout(false);

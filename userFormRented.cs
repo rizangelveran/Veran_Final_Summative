@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataHelper;
@@ -38,7 +39,7 @@ namespace Veran_Final_Summative
             rentedMovies.DataSource = dt.GetRentedMovie(myUser);
             rentedMovies.ClearSelection();
             rentedMovies.Sort(rentedMovies.Columns[0], ListSortDirection.Ascending);
-            rentedMovies.ClearSelection();
+
 
         }
 
@@ -54,9 +55,21 @@ namespace Veran_Final_Summative
 
         private void userFormRented_Load(object sender, EventArgs e)
         {
-            refDataTbl();
+        
+        }
+
+        private void refreshBut_Click(object sender, EventArgs e)
+        {
+            Thread.Sleep(1_000);
+            rentedMovies.DataSource = null;
+           refDataTbl();
             rentedMovies.Update();
             rentedMovies.Refresh();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

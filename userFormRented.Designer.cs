@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rentedMovies = new System.Windows.Forms.DataGridView();
             this.help = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.refreshBut = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.rentedMovies)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,14 +47,14 @@
             this.rentedMovies.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.rentedMovies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.rentedMovies.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.rentedMovies.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Modern No. 20", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.rentedMovies.DefaultCellStyle = dataGridViewCellStyle3;
             this.rentedMovies.Location = new System.Drawing.Point(12, 62);
             this.rentedMovies.MultiSelect = false;
             this.rentedMovies.Name = "rentedMovies";
@@ -92,11 +94,34 @@
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             // 
+            // refreshBut
+            // 
+            this.refreshBut.Location = new System.Drawing.Point(851, 480);
+            this.refreshBut.Name = "refreshBut";
+            this.refreshBut.Size = new System.Drawing.Size(119, 36);
+            this.refreshBut.TabIndex = 4;
+            this.refreshBut.Text = "Refresh";
+            this.refreshBut.UseVisualStyleBackColor = true;
+            this.refreshBut.Click += new System.EventHandler(this.refreshBut_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(627, 486);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(235, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Not Seeing Your Movie?";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // userFormRented
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1001, 482);
+            this.ClientSize = new System.Drawing.Size(1001, 535);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.refreshBut);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.help);
@@ -123,5 +148,7 @@
         private System.Windows.Forms.Button help;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button refreshBut;
+        private System.Windows.Forms.Label label1;
     }
 }

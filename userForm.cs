@@ -128,7 +128,12 @@ namespace Veran_Final_Summative
         {
             userFormEdits editPass = new userFormEdits(myUser);
             editPass.ShowDialog();
+        }
 
+        private void viewCurrentRentedMoviesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userFormRented rentedForm = new userFormRented(myUser);
+            rentedForm.ShowDialog();
         }
 
         private void txtsearchBox_TextChanged(object sender, EventArgs e)

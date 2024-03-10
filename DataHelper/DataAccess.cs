@@ -105,6 +105,20 @@ namespace DataHelper
             return dt;
         }
 
+        //view rented movie by user
+
+        public DataTable GetRentedMovie(string getLogUsers)
+        {
+            SqlCommand cmdRentedMovie = new SqlCommand("GetRentedMovieByUser", myConn);
+            cmdRentedMovie.CommandType = CommandType.StoredProcedure;
+            cmdRentedMovie.Parameters.Add("@getUserPurchaser", SqlDbType.NVarChar).Value = getLogUsers;
+            SqlDataAdapter viewUserMovie = new SqlDataAdapter(cmdRentedMovie);
+            DataTable dx = new DataTable();
+            viewUserMovie.Fill(dx);
+            return dx;
+
+        }
+
         #endregion
         #region //    =========== ------------ MOVIE ------------ ===========
         //search Movies

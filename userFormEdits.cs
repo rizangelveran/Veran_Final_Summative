@@ -22,10 +22,7 @@ namespace Veran_Final_Summative
             this.Text = "Change " + myUser + "'s Password";
         }
 
-        private void backButton_Click(object sender, EventArgs e)
-        {
-           //ignore
-        }
+        
 
         private void changePassbut_Click(object sender, EventArgs e)
         {

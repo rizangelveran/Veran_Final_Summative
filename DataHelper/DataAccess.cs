@@ -118,6 +118,18 @@ namespace DataHelper
             return dx;
 
         }
+        //searching function
+        public DataTable RMSearchByName(string searchName, string getLoggedin)
+        {
+            SqlCommand cmdSearchName = new SqlCommand("RMSearchandDisplayMovie", myConn);
+            cmdSearchName.CommandType = CommandType.StoredProcedure;
+            cmdSearchName.Parameters.Add("@getUser", SqlDbType.NVarChar).Value = getLoggedin;
+            cmdSearchName.Parameters.Add("@getMovName", SqlDbType.NVarChar).Value = searchName;
+            SqlDataAdapter viewbyName = new SqlDataAdapter(cmdSearchName);
+            DataTable dt = new DataTable();
+            viewbyName.Fill(dt);
+            return dt;
+        }
 
         #endregion
         #region //    =========== ------------ MOVIE ------------ ===========

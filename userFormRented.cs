@@ -25,13 +25,7 @@ namespace Veran_Final_Summative
             refDataTbl();
             rentedMovies.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;//fill data in column
             rentedMovies.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            rentedMovies.Columns[0].HeaderText = "Movie Name";
-            rentedMovies.Columns[1].HeaderText = "Movie Genre";
-            rentedMovies.Columns[2].HeaderText = "Total Payment";
-            rentedMovies.Columns[3].HeaderText = "Change";
-            rentedMovies.Columns[4].HeaderText = "Purchased by";
-            rentedMovies.Columns[5].HeaderText = "Duration";
-            rentedMovies.Columns[6].HeaderText = "Year";
+
   
         }
         public void refDataTbl()
@@ -39,7 +33,13 @@ namespace Veran_Final_Summative
             rentedMovies.DataSource = dt.GetRentedMovie(myUser);
             rentedMovies.ClearSelection();
             rentedMovies.Sort(rentedMovies.Columns[0], ListSortDirection.Ascending);
-
+            rentedMovies.Columns[0].HeaderText = "Movie Name";
+            rentedMovies.Columns[1].HeaderText = "Movie Genre";
+            rentedMovies.Columns[2].HeaderText = "Total Payment";
+            rentedMovies.Columns[3].HeaderText = "Change";
+            rentedMovies.Columns[4].HeaderText = "Purchased by";
+            rentedMovies.Columns[5].HeaderText = "Duration";
+            rentedMovies.Columns[6].HeaderText = "Year";
 
         }
 
@@ -55,21 +55,32 @@ namespace Veran_Final_Summative
 
         private void userFormRented_Load(object sender, EventArgs e)
         {
-        
+      
         }
 
         private void refreshBut_Click(object sender, EventArgs e)
         {
-            Thread.Sleep(1_000);
-            rentedMovies.DataSource = null;
-           refDataTbl();
-            rentedMovies.Update();
-            rentedMovies.Refresh();
+
+            /*  rentedMovies.DataSource = null;
+            //Thread.Sleep(1_000);
+            rentedMovies.DataSource = dt.GetRentedMovie(myUser);
+          rentedMovies.Update();
+            rentedMovies.Refresh();*/
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void userFormRented_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            rentedMovies.DataSource = null;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            rentedMovies.DataSource = dt.RMSearchByName(textBox1.Text, myUser);
         }
     }
 }

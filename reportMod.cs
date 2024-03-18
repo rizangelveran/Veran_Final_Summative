@@ -18,6 +18,12 @@ namespace Veran_Final_Summative
         public reportMod()
         {
             InitializeComponent();
+            time2day.Text = DateTime.Now.ToString("hh:mm:ss tt");
+            dmy2day.Text = DateTime.Now.ToShortDateString();
+            dt.databaseTotalProfit();
+            dt.databaseTotalUsers();
+            totProfit.Text = dt.totalProfit.ToString();
+            totUsers.Text = dt.totalUsers.ToString();
         }
 
         private void mainMenuToolStripMenuItem_Click(object sender, EventArgs e)

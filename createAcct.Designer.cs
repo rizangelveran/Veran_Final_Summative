@@ -51,7 +51,7 @@ namespace Veran_Final_Summative
             this.label1.Font = new System.Drawing.Font("Old English Text MT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 38);
+            this.label1.Size = new System.Drawing.Size(355, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "Create New Account";
             // 
@@ -61,7 +61,7 @@ namespace Veran_Final_Summative
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(119, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 25);
+            this.label2.Size = new System.Drawing.Size(158, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "First Name:";
             // 
@@ -71,7 +71,7 @@ namespace Veran_Final_Summative
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(119, 116);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 25);
+            this.label3.Size = new System.Drawing.Size(151, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "Last Name:";
             // 
@@ -81,7 +81,7 @@ namespace Veran_Final_Summative
             this.label4.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(119, 193);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(113, 25);
+            this.label4.Size = new System.Drawing.Size(141, 31);
             this.label4.TabIndex = 3;
             this.label4.Text = "Username:";
             // 
@@ -91,7 +91,7 @@ namespace Veran_Final_Summative
             this.label5.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(119, 233);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 25);
+            this.label5.Size = new System.Drawing.Size(134, 31);
             this.label5.TabIndex = 4;
             this.label5.Text = "Password:";
             // 
@@ -101,7 +101,7 @@ namespace Veran_Final_Summative
             this.label6.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(119, 156);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 25);
+            this.label6.Size = new System.Drawing.Size(67, 31);
             this.label6.TabIndex = 5;
             this.label6.Text = "Age:";
             // 
@@ -120,7 +120,7 @@ namespace Veran_Final_Summative
             this.txtfname.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfname.Location = new System.Drawing.Point(271, 72);
             this.txtfname.Name = "txtfname";
-            this.txtfname.Size = new System.Drawing.Size(272, 30);
+            this.txtfname.Size = new System.Drawing.Size(272, 36);
             this.txtfname.TabIndex = 1;
             // 
             // txtlname
@@ -128,7 +128,7 @@ namespace Veran_Final_Summative
             this.txtlname.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtlname.Location = new System.Drawing.Point(271, 116);
             this.txtlname.Name = "txtlname";
-            this.txtlname.Size = new System.Drawing.Size(272, 30);
+            this.txtlname.Size = new System.Drawing.Size(272, 36);
             this.txtlname.TabIndex = 2;
             // 
             // txtuser
@@ -136,7 +136,7 @@ namespace Veran_Final_Summative
             this.txtuser.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.Location = new System.Drawing.Point(271, 188);
             this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(272, 30);
+            this.txtuser.Size = new System.Drawing.Size(272, 36);
             this.txtuser.TabIndex = 4;
             // 
             // txtpass
@@ -145,7 +145,7 @@ namespace Veran_Final_Summative
             this.txtpass.Location = new System.Drawing.Point(271, 233);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
-            this.txtpass.Size = new System.Drawing.Size(272, 30);
+            this.txtpass.Size = new System.Drawing.Size(272, 36);
             this.txtpass.TabIndex = 5;
             // 
             // txtage
@@ -154,7 +154,7 @@ namespace Veran_Final_Summative
             this.txtage.Location = new System.Drawing.Point(271, 152);
             this.txtage.Mask = "000";
             this.txtage.Name = "txtage";
-            this.txtage.Size = new System.Drawing.Size(56, 33);
+            this.txtage.Size = new System.Drawing.Size(56, 40);
             this.txtage.TabIndex = 3;
             this.txtage.ValidatingType = typeof(int);
             // 
@@ -163,7 +163,7 @@ namespace Veran_Final_Summative
             this.showPass.AutoSize = true;
             this.showPass.Location = new System.Drawing.Point(549, 239);
             this.showPass.Name = "showPass";
-            this.showPass.Size = new System.Drawing.Size(95, 22);
+            this.showPass.Size = new System.Drawing.Size(117, 26);
             this.showPass.TabIndex = 7;
             this.showPass.Text = "Show Pass";
             this.showPass.UseVisualStyleBackColor = true;
@@ -171,7 +171,7 @@ namespace Veran_Final_Summative
             // 
             // createAcct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 328);
             this.Controls.Add(this.showPass);
@@ -190,11 +190,13 @@ namespace Veran_Final_Summative
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "createAcct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "createAcct";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.createAcct_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

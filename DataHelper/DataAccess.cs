@@ -18,12 +18,20 @@ namespace DataHelper
         string moviename,moviegenre;
         decimal rentalfee;
         string currentMovieName;
+        int totProfit;
+        int totusers;
+        
         public string Usertype { get => usertype; set => usertype = value; }
         public string CurrentMovieName { get => currentMovieName; set => currentMovieName = value; }
         public string Moviename { get => moviename; set => moviename = value; }
         public string Moviegenre { get => moviegenre; set => moviegenre = value; }
         public decimal Rentalfee { get => rentalfee; set => rentalfee = value; }
+
+        //to call outside of DataAccess call varname.totalProfit|inside of dataAcces call totalProfit
+        public int totalProfit { get => totProfit; set => totProfit = value; }
+        public int totalUsers { get=> totusers; set => totusers = value; } 
         #endregion
+
 
         //encryptor
         public string EncryptData(string userPassword)
@@ -45,7 +53,51 @@ namespace DataHelper
         SqlConnection myConn = new SqlConnection(ConnStr);
 
 
-#region//    =========== ------------ USER ------------ ===========
+
+        #region ---ADMIN---
+
+
+        public bool databaseTotalProfit()
+        {
+            bool found = false;
+            myConn.Open();
+            SqlCommand readCmd = new SqlCommand("SLGetTotalProfits", myConn);
+            readCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader dr;
+            dr = readCmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                found = true;
+                totProfit = Convert.ToInt32(dr["Total_Price"]);
+                break;
+            }
+            myConn.Close();
+            return found;
+        }
+
+        public void databaseTotalUsers()
+        {
+           
+            myConn.Open();
+            SqlCommand readCmd = new SqlCommand("SLGetTotalUsers", myConn);
+            readCmd.CommandType = CommandType.StoredProcedure;
+            SqlDataReader dr;
+            dr = readCmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                totalUsers = Convert.ToInt32(dr["Total_Users"]);
+                break;
+            }
+            myConn.Close();
+          
+        }
+
+        #endregion
+
+
+        #region//    =========== ------------ USER ------------ ===========
         public bool CheckAccount(string userName, string userPass)
         {
             bool found = false;
@@ -232,24 +284,7 @@ namespace DataHelper
         #region //SALES
         //SAVE A NEW SALE
 
-
-
-        #endregion
-
-        #region price Calcs
-        public Decimal PaymentCal(decimal getDays, decimal getRenFee )
-        {
-            return getDays * getRenFee;
-        }
-
-        public Decimal PaymentChecker(decimal enteredPrice, decimal getTotFee)
-        {
-            return getTotFee - enteredPrice;
-
-        }
-
         //Add saving to database function
-
         public void SaveMovieSale(string getMovieName, string getGenre, decimal getRecFee, decimal getChange, decimal getDuration, string getUsername)
         {
             myConn.Open();
@@ -268,6 +303,24 @@ namespace DataHelper
             saveCmd.ExecuteNonQuery();
             myConn.Close();
         }
+
+        #endregion
+
+        #region price Calcs
+        public Decimal PaymentCal(decimal getDays, decimal getRenFee )
+        {
+            return getDays * getRenFee;
+        }
+
+        public Decimal PaymentChecker(decimal enteredPrice, decimal getTotFee)
+        {
+            return getTotFee - enteredPrice;
+
+        }
+
+   
+
+
 
         #endregion
     }

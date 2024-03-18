@@ -66,6 +66,8 @@ namespace Veran_Final_Summative
             rentedMovies.DataSource = dt.GetRentedMovie(myUser);
           rentedMovies.Update();
             rentedMovies.Refresh();*/
+            refDataTbl();
+            label1.Text = "Your Movie Still Doesnt Show up? Try Logging Out and IN";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -75,7 +77,7 @@ namespace Veran_Final_Summative
 
         private void userFormRented_FormClosing(object sender, FormClosingEventArgs e)
         {
-            rentedMovies.DataSource = null;
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

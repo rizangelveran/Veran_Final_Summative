@@ -117,11 +117,7 @@ namespace Veran_Final_Summative
 
         private void lOGOUTToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form1 logger = new Form1();
-            logger.ShowDialog();
-            logger.Visible = true;
-            this.Close();
+           Application.Restart();
         }
 
         private void editAccountToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,7 +129,8 @@ namespace Veran_Final_Summative
         private void viewCurrentRentedMoviesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             userFormRented rentedForm = new userFormRented(myUser);
-            rentedForm.ShowDialog();
+            rentedForm.Show();
+            rentedForm.Visible = true;
         }
 
         private void txtsearchBox_TextChanged(object sender, EventArgs e)

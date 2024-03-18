@@ -19,18 +19,18 @@ namespace Veran_Final_Summative
             InitializeComponent();
         }
 
-        private void btnLOGIN_Click(object sender, EventArgs e)
+        private void loginFunc()
         {
-            if(String.IsNullOrEmpty(txtUser.Text)|| String.IsNullOrEmpty(txtPass.Text))
+            if (String.IsNullOrEmpty(txtUser.Text) || String.IsNullOrEmpty(txtPass.Text))
             {
                 MessageBox.Show("Enter Something!", "Error"
-                    ,MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                    , MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 string getUname = txtUser.Text;
                 string getPass = dt.EncryptData(txtPass.Text);
-                if (dt.CheckAccount(getUname,getPass))
+                if (dt.CheckAccount(getUname, getPass))
                 {
                     if (dt.Usertype.Equals("user"))
                     {
@@ -53,11 +53,17 @@ namespace Veran_Final_Summative
                     MessageBox.Show("Enter Credentials Correctly!\n-You might have entered an incorrect spelling" +
                         " of your account/password\n" +
                         "-Your entered credentials is not in the database. " +
-                        "Try Creating a New Account", "Error",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        "Try Creating a New Account", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtUser.Clear();
                     txtPass.Clear();
                 }
             }
+
+        }
+
+        private void btnLOGIN_Click(object sender, EventArgs e)
+        {
+            loginFunc();
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -72,6 +78,14 @@ namespace Veran_Final_Summative
         private void showPass_CheckedChanged(object sender, EventArgs e)
         {
             txtPass.PasswordChar = showPass.Checked ? '\0' : '*';
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {   
+               loginFunc();
+            }
         }
     }
 }

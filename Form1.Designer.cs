@@ -46,7 +46,7 @@ namespace Veran_Final_Summative
             this.label1.Font = new System.Drawing.Font("Old English Text MT", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 32);
+            this.label1.Size = new System.Drawing.Size(186, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "CoolFLIX";
             // 
@@ -56,7 +56,7 @@ namespace Veran_Final_Summative
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(44, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 25);
+            this.label2.Size = new System.Drawing.Size(189, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "USERNAME:";
             // 
@@ -66,7 +66,7 @@ namespace Veran_Final_Summative
             this.label3.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(44, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 25);
+            this.label3.Size = new System.Drawing.Size(184, 31);
             this.label3.TabIndex = 2;
             this.label3.Text = "PASSWORD:";
             // 
@@ -75,7 +75,7 @@ namespace Veran_Final_Summative
             this.txtUser.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.Location = new System.Drawing.Point(215, 70);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(319, 36);
+            this.txtUser.Size = new System.Drawing.Size(319, 44);
             this.txtUser.TabIndex = 1;
             // 
             // txtPass
@@ -84,7 +84,7 @@ namespace Veran_Final_Summative
             this.txtPass.Location = new System.Drawing.Point(215, 115);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(319, 36);
+            this.txtPass.Size = new System.Drawing.Size(319, 44);
             this.txtPass.TabIndex = 2;
             // 
             // btnLOGIN
@@ -114,7 +114,7 @@ namespace Veran_Final_Summative
             this.showPass.AutoSize = true;
             this.showPass.Location = new System.Drawing.Point(544, 121);
             this.showPass.Name = "showPass";
-            this.showPass.Size = new System.Drawing.Size(126, 22);
+            this.showPass.Size = new System.Drawing.Size(157, 26);
             this.showPass.TabIndex = 7;
             this.showPass.Text = "Show Password";
             this.showPass.UseVisualStyleBackColor = true;
@@ -122,7 +122,7 @@ namespace Veran_Final_Summative
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 243);
             this.Controls.Add(this.showPass);
@@ -136,11 +136,13 @@ namespace Veran_Final_Summative
             this.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CoolFlix";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
